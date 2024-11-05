@@ -1,0 +1,249 @@
+/* Reset e Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: 'Merriweather Sans', sans-serif; /* Alterado para Merriweather Sans */
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 77px;
+}
+
+.barra {
+    display: flex;
+    position: relative;
+    z-index: 1;  
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: left 0.3s ease;
+    z-index: 1001;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    color: #00bfff;
+}
+
+.sidebar a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #00bfff;
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+
+.sidebar a:hover::after {
+    width: 70%;
+}
+
+.menu-toggle {
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1002;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: 'Kavoon', cursive; /* Mantido como Kavoon para o título principal */
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #e0e0e0;
+    font-style: italic;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+h2, h3 {
+    color: white;
+    border-bottom: 4px solid #6878f4;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.section.paleolitico h3 {
+    font-family: 'Kavoon', cursive; 
+    color: #fff;
+    margin-top: 10px;
+    font-size: 2.2em; 
+}
+
+/* Estilo para os títulos Kavoon */
+.kavoon-title {
+    font-family: 'Kavoon', cursive; 
+    color: #fff;
+    font-size: 2em; /* Ajuste o tamanho conforme necessário */
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Estilos para o conteúdo */
+.content {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.text {
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 35%;
+    text-align: center;
+}
+
+.image img {
+    max-width: 90%;
+    border-radius: 8px;
+}
+
+.caption {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Estilos específicos para o Paleolítico */
+.section.paleolitico .content {
+    flex-direction: row-reverse; /* A imagem fica do lado direito do texto */
+}
+
+.paleolitico .image img {
+    margin-right: 20px;
+}
+
+/* Estilos específicos para o Mesolítico e Neolítico */
+.section.mesolitico-neolitico .content {
+    flex-direction: row; /* A imagem fica à esquerda do texto */
+    justify-content: space-between; /* Espaçamento entre imagem e texto */
+}
+
+.mesolitico-neolitico .image img {
+    margin-left: 20px; /* Espaçamento à esquerda da imagem */
+}
+
+.mesolitico-neolitico .text {
+    margin-top: 40px; /* Aumenta a margem superior ao texto do Mesolítico */
+}
+.videos {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: center; 
+    gap: 20px;
+    overflow-x: auto; 
+}
+
+.video {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.video h4 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.video iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Altera para coluna em telas menores */
+    }
+
+    .text, .image {
+        width: 100%; /* 100% em telas pequenas */
+    }
+
+    .text {
+        margin-bottom: 0; /* Remove a margem inferior em telas pequenas */
+    }
+}

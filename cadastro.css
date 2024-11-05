@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    background-image: url('https://wallpapercave.com/wp/wp2244221.jpg'); /* Caminho para a imagem de fundo */
+    background-size: cover; /* Faz com que a imagem cubra toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    color: white; /* Cor do texto */
+}
+
+.container {
+    width: 400px; /* Largura da caixa de cadastro */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo da caixa de cadastro com transparência */
+    padding: 40px; /* Espaçamento interno da caixa */
+    border-radius: 8px; /* Bordas arredondadas da caixa */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra da caixa */
+}
+
+h1 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-size: 36px; /* Tamanho da fonte do título */
+}
+
+label {
+    margin-bottom: 5px; /* Espaço abaixo dos labels */
+    display: block; /* Cada label ocupa uma linha inteira */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px; /* Espaçamento interno nos campos */
+    border: 2px solid #2FA8FF; /* Cor das bordas dos campos de entrada */
+    border-radius: 5px; /* Bordas arredondadas dos campos */
+    color: white; /* Cor do texto dentro dos campos */
+    background-color: #1a1a1a; /* Fundo dos campos */
+    width: 100%; /* Campos ocupam toda a largura da caixa */
+    margin-bottom: 15px; /* Espaço abaixo dos campos */
+}
+
+select {
+    padding: 10px; /* Espaçamento interno do select */
+    border: 2px solid #2FA8FF; /* Cor das bordas do select */
+    border-radius: 5px; /* Bordas arredondadas do select */
+    background-color: #1a1a1a; /* Fundo do select */
+    color: white; /* Cor do texto no select */
+    width: 100%; /* Select ocupa toda a largura da caixa */
+    margin-bottom: 15px; /* Espaço abaixo do select */
+}
+
+button {
+    padding: 10px; /* Espaçamento interno do botão */
+    background-color: #2FA8FF; /* Cor do botão */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    color: white; /* Cor do texto no botão */
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+    width: 100%; /* Botão ocupa toda a largura da caixa */
+    font-size: 16px; /* Tamanho da fonte do botão */
+}
+
+button:hover {
+    background-color: #1c7a9c; /* Cor do botão ao passar o mouse */
+}
